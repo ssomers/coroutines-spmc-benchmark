@@ -1,0 +1,8 @@
+# Gradle project-specific cache directories
+.gradle
+
+# Gradle build output directories
+build
+
+# Kotlin plugin data
+.kotlin
