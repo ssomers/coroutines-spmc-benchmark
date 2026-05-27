@@ -9,7 +9,7 @@ class CoroutinesSingleProducerDemo {
 
     @OptIn(ExperimentalCoroutinesApi::class)
     private fun CoroutineScope.produceJobs(jobs: Int, capacity: Int): ReceiveChannel<Job> =
-        produce(capacity = capacity) {
+        produce(Dispatchers.Default, capacity = capacity) {
             (1..jobs).forEach {
                 send(Job(it))
             }
